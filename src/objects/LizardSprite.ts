@@ -1,3 +1,5 @@
+import { Physics, Scene, Textures, Math } from 'phaser'
+
 enum Direction {
   UP,
   DOWN,
@@ -5,15 +7,15 @@ enum Direction {
   RIGHT,
 }
 
-export default class LizardSprite extends Phaser.Physics.Arcade.Sprite {
+export default class LizardSprite extends Physics.Arcade.Sprite {
   private direction = Direction.RIGHT
   private speed = 50
 
   constructor(
-    scene: Phaser.Scene,
+    scene: Scene,
     x: number,
     y: number,
-    texture: string | Phaser.Textures.Texture,
+    texture: string | Textures.Texture,
     frame: string | number,
   ) {
     super(scene, x, y, texture, frame)
@@ -111,15 +113,15 @@ export default class LizardSprite extends Phaser.Physics.Arcade.Sprite {
   }
 
   randomDirection(exclude: number) {
-    let newDirection = Phaser.Math.Between(0, 3)
+    let newDirection = Math.Between(0, 3)
     while (newDirection === exclude) {
-      newDirection = Phaser.Math.Between(0, 3)
+      newDirection = Math.Between(0, 3)
     }
 
     return newDirection
   }
 
-  handleTileCollision(item: Phaser.Physics.Arcade.Sprite) {
+  handleTileCollision(item: Physics.Arcade.Sprite) {
     if (item !== this) {
       return
     }

@@ -1,13 +1,14 @@
+import { Scene, Types, Physics, Tilemaps } from 'phaser'
 import LizardSprite from '../objects/LizardSprite'
 import PlayerSprite from '../objects/PlayerSprite'
 
-export default class MainScene extends Phaser.Scene {
-  cursors!: Phaser.Types.Input.Keyboard.CursorKeys
-  character!: Phaser.Types.Physics.Arcade.SpriteWithDynamicBody
-  lizards!: Phaser.Physics.Arcade.Group
+export default class MainScene extends Scene {
+  cursors!: Types.Input.Keyboard.CursorKeys
+  character!: Types.Physics.Arcade.SpriteWithDynamicBody
+  lizards!: Physics.Arcade.Group
   speed!: number
   player!: PlayerSprite
-  wallsLayer!: Phaser.Tilemaps.TilemapLayer | null
+  wallsLayer!: Tilemaps.TilemapLayer | null
 
   constructor() {
     super({ key: 'MainScene' })

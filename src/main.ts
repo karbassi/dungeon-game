@@ -1,14 +1,14 @@
-import 'phaser'
-import PreloaderScene from './scenes/PreloaderScene'
+import { AUTO, Scale, Types, Game } from 'phaser'
+import PreloadScene from './scenes/PreloaderScene'
 import MainScene from './scenes/MainScene'
 
-const config: Phaser.Types.Core.GameConfig = {
+const config: Types.Core.GameConfig = {
   banner: false,
-  type: Phaser.AUTO,
+  type: AUTO,
   backgroundColor: '#483B3A',
   scale: {
-    mode: Phaser.Scale.FIT,
-    autoCenter: Phaser.Scale.CENTER_BOTH,
+    mode: Scale.FIT,
+    autoCenter: Scale.CENTER_BOTH,
     width: 400,
     height: 250,
     zoom: 2,
@@ -23,7 +23,7 @@ const config: Phaser.Types.Core.GameConfig = {
   audio: {
     noAudio: true,
   },
-  scene: [PreloaderScene, MainScene],
+  scene: [PreloadScene, MainScene],
 }
 
-export default new Phaser.Game(config)
+export default new Game(config)

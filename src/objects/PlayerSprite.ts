@@ -1,13 +1,15 @@
-type ColliderGameObject =
-  | Phaser.Types.Physics.Arcade.GameObjectWithBody
-  | Phaser.Tilemaps.Tile
+import { Types, Tilemaps, Physics, Scene } from 'phaser'
 
-export default class PlayerSprite extends Phaser.Physics.Arcade.Sprite {
+type ColliderGameObject =
+  | Types.Physics.Arcade.GameObjectWithBody
+  | Tilemaps.Tile
+
+export default class PlayerSprite extends Physics.Arcade.Sprite {
   public healthPoints = 100
   private speed = 100
-  private cursors: Phaser.Types.Input.Keyboard.CursorKeys
+  private cursors: Types.Input.Keyboard.CursorKeys
 
-  constructor(scene: Phaser.Scene, x: number, y: number, speed?: number) {
+  constructor(scene: Scene, x: number, y: number, speed?: number) {
     super(scene, x, y, 'character')
 
     this.makeAnimations()
