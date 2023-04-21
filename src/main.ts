@@ -3,6 +3,7 @@ import PreloaderScene from './scenes/PreloaderScene'
 import MainScene from './scenes/MainScene'
 
 const config: Phaser.Types.Core.GameConfig = {
+  banner: false,
   type: Phaser.AUTO,
   backgroundColor: '#483B3A',
   scale: {
@@ -18,6 +19,9 @@ const config: Phaser.Types.Core.GameConfig = {
       gravity: { y: 0 },
       debug: false,
     },
+  },
+  audio: {
+    noAudio: true,
   },
   scene: [PreloaderScene, MainScene],
 }

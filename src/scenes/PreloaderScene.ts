@@ -8,11 +8,11 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.setBaseURL('./assets/img/')
 
     this.load.image('tiles', 'tiles/dungeon_tiles_extruded.png')
-    this.load.tilemapTiledJSON('dungeon', 'tiles/dungeon-01.json')
+    this.load.tilemapTiledJSON('level-01', 'tiles/level-01.json')
     this.load.atlas(
       'character',
       'character/character.png',
-      'character/character.json'
+      'character/character.json',
     )
     this.load.atlas('lizard', 'enemies/lizard.png', 'enemies/lizard.json')
   }

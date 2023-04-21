@@ -1,23 +1,21 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "types": ["vite/client"],
-    "allowJs": false,
-    "skipLibCheck": false,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "sourceMap": true,
-    "forceConsistentCasingInFileNames": true,
+    "lib": ["ESNext", "DOM"],
+    "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "Node",
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "sourceMap": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "esModuleInterop": true,
     "noEmit": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true
   },
-  "include": ["./src/**/*", "src/utils"]
+  "include": ["src"]
 }

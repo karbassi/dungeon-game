@@ -3,8 +3,8 @@ type ColliderGameObject =
   | Phaser.Tilemaps.Tile
 
 export default class PlayerSprite extends Phaser.Physics.Arcade.Sprite {
-  public healthPoints: number = 100
-  private speed: number = 100
+  public healthPoints = 100
+  private speed = 100
   private cursors: Phaser.Types.Input.Keyboard.CursorKeys
 
   constructor(scene: Phaser.Scene, x: number, y: number, speed?: number) {

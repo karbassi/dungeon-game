@@ -14,7 +14,7 @@ export default class LizardSprite extends Phaser.Physics.Arcade.Sprite {
     x: number,
     y: number,
     texture: string | Phaser.Textures.Texture,
-    frame: string | number
+    frame: string | number,
   ) {
     super(scene, x, y, texture, frame)
 
@@ -37,7 +37,7 @@ export default class LizardSprite extends Phaser.Physics.Arcade.Sprite {
     scene.physics.world.on(
       Phaser.Physics.Arcade.Events.TILE_COLLIDE,
       this.handleTileCollision,
-      this
+      this,
     )
   }
 

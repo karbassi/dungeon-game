@@ -5,7 +5,11 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "format": "prettier --list-different --write --cache .",
+    "lint": "eslint --quiet --cache ./src/",
+    "lint:all": "eslint --cache ./src/",
+    "lint:fix": "eslint --cache --fix ./src/"
   },
   "repository": {
     "type": "git",
@@ -19,12 +23,14 @@
   },
   "homepage": "https://github.com/iit-id/dungeon-crawler#readme",
   "devDependencies": {
-    "@rollup/plugin-alias": "^5.0.0",
-    "@rollup/plugin-commonjs": "^24.1.0",
-    "@rollup/plugin-replace": "^5.0.2",
-    "@types/node": "^18.15.11",
-    "phaser": "^3.60.0",
+    "@types/node": "^18.15.12",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "eslint": "^8.38.0",
+    "prettier": "^2.8.7",
     "typescript": "^5.0.4",
-    "vite": "^4.2.1"
+    "vite": "^4.3.1"
+  },
+  "dependencies": {
+    "phaser": "^3.60.0"
   }
 }
