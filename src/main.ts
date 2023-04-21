@@ -1,6 +1,7 @@
-import { AUTO, Scale, Types, Game } from 'phaser'
 import PreloadScene from './scenes/PreloaderScene'
 import MainScene from './scenes/MainScene'
+import { AUTO, Game, Scale } from 'phaser'
+import type { Types } from 'phaser'
 
 const config: Types.Core.GameConfig = {
   banner: false,

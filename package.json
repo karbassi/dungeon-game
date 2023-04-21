@@ -5,11 +5,12 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "format": "prettier --list-different --write --cache .",
-    "lint": "eslint --quiet --cache ./src/",
-    "lint:all": "eslint --cache ./src/",
-    "lint:fix": "eslint --cache --fix ./src/"
+    "lint": "eslint --quiet --cache --ext ts ./src/",
+    "lint:all": "eslint --cache --ext ts ./src/",
+    "lint:fix": "eslint --cache --ext ts --fix ./src/"
   },
   "repository": {
     "type": "git",

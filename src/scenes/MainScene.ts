@@ -1,4 +1,5 @@
-import { Scene, Types, Physics, Tilemaps } from 'phaser'
+import { Scene } from 'phaser'
+import type { Physics, Tilemaps, Types } from 'phaser'
 import LizardSprite from '../objects/LizardSprite'
 import PlayerSprite from '../objects/PlayerSprite'
 

@@ -1,4 +1,5 @@
-import { Physics, Scene, Textures, Math } from 'phaser'
+import { Physics, Math } from 'phaser'
+import type { Scene, Textures } from 'phaser'
 
 enum Direction {
   UP,
@@ -37,7 +38,7 @@ export default class LizardSprite extends Physics.Arcade.Sprite {
 
     // What to do when colliding with the world
     scene.physics.world.on(
-      Phaser.Physics.Arcade.Events.TILE_COLLIDE,
+      Physics.Arcade.Events.TILE_COLLIDE,
       this.handleTileCollision,
       this,
     )

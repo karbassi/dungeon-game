@@ -1,4 +1,5 @@
-import { Types, Tilemaps, Physics, Scene } from 'phaser'
+import { Physics } from 'phaser'
+import type { Types, Tilemaps, Scene } from 'phaser'
 
 type ColliderGameObject =
   | Types.Physics.Arcade.GameObjectWithBody
